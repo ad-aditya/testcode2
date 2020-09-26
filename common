@@ -1,0 +1,37 @@
+#Program to list the common elements in two lists.
+
+def unique(lst):
+    nlst = list()
+    for i in lst:
+        if i in nlst:
+            continue
+        else:
+            nlst.append(i)
+    return nlst
+
+
+def common(lst1,lst2):
+    lst3 = list()
+    for i in lst1:
+        for k in lst2:
+            if k == i:
+                lst3.append(i)
+            else:
+                continue
+    return unique(lst3)
+
+lst1 = list()
+lst2 = list()
+size1 = int(input("How many elements do you want to enter... "))
+for i in range(0,size1):
+    new = input("Enter the next element in the list... ")
+    lst1.append(new)
+
+size2 = int(input("How many elements do you want to enter in the second list... "))
+for j in range(0,size2):
+    new = input("Enter the next element in the list... ")
+    lst2.append(new)
+
+print("First List: \n",lst1)
+print("Second List: \n",lst2)
+print("Common members: \n",common(lst1,lst2))

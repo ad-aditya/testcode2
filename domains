@@ -1,0 +1,13 @@
+fname=input('Enter the file name: ')
+fhand=open(fname)
+lst=list()
+domain=dict()
+for fh in fhand:
+    if fh.startswith('From '):
+        lh=fh.split()
+        tmp=lh[1]
+        tmpl=tmp.split('@')
+        lst.append(tmpl[1])
+for dom in lst:
+    domain[dom]=domain.get(dom,0)+1
+print(domain)

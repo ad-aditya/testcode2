@@ -1,0 +1,11 @@
+fname=input('Enter the file name:')
+fhand=open(fname)
+lst=list()
+days=dict()
+for fh in fhand:
+    if fh.startswith('From '):
+        lh=fh.split()
+        lst.append(lh[2])
+for day in lst:
+    days[day]=days.get(day,0)+1
+print(days)            

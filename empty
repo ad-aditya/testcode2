@@ -1,0 +1,15 @@
+#Program to check if a list is empty or not.
+
+def empty(lst):
+    if len(lst) != 0:
+        print("List isn't empty!!!")
+    else:
+        print("List Empty!")
+
+lst = list()
+size = int(input("How many elements do you want to enter... "))
+for i in range(0,size):
+    new = input("Enter the next element in the list... ")
+    lst.append(new)
+print("The list is: \n",lst)    
+empty(lst)
